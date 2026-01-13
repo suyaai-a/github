@@ -1,0 +1,176 @@
+.graphics {
+    margin: auto;
+}
+
+
+body {
+    height: 750px;
+}
+
+nav {
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: "fredoka";
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+nav ul li {
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 12px;
+    margin: 15px;
+    width: 165px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header h1 {
+    font-family: 'jua';
+    font-size: 48px;
+    color: #310A69;
+    margin-top:0;
+}
+
+header h2 {
+    font-family: 'baloo 2';
+    font-size: 20px;
+    color: #310A69;
+}
+
+header {
+    background-color:#D0ADC4; 
+    margin: auto;
+    padding: 20px;
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    /* gap: 100px; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.leaves {
+    align-self: flex-start;
+    margin-top: -20px;
+    opacity: 1;
+    transition: opacity 3s ease;
+    
+    /* ease-in-out:infinite;  */
+    /* transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+    transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000); */
+}
+
+.leaves:hover {
+    /* animation: fade 3s ease-in-out;  */
+    opacity: 0;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.flex-container {
+    /* margin-left: 40px; */
+    text-align: right;
+    /* margin: auto; */
+}
+
+main {
+    max-width: 1200px;
+    height: 410px;
+    display: flex;
+    background-color:#FFF6EB ;
+    justify-content: center;
+    /* gap: 40px; */
+    padding: 15px;
+    margin: auto;
+}
+
+
+.container h2 {
+    text-align: center;
+    font-family: 'outfit';
+    font-size: 30px;
+    color: #F7F6FE;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.container {
+    background-color: #644280;
+    border-radius: 20px;
+    width: 250px;
+    height: 380px;
+    margin: auto;
+} 
+
+footer {
+    font-family: "baloo 2";
+    font-size: 18px;
+    color: #015A84;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #FFF6EB;
+    margin: auto;
+    padding: 15px;
+    max-width: 1200px;
+    margin-top: -35px;
+    margin-bottom: -35px;
+    
+}
+
+footer a {
+    color: #015A84;
+}
+
+.wiggle {
+    animation: wiggle 1s infinite;
+}
+
+ @keyframes wiggle {
+   0% {
+     transform: rotate(0deg);
+   
+   }
+   25% {
+     transform: rotate(-5deg);
+   }
+   50% {
+     transform: rotate(5deg);
+   }
+   75% {
+     transform: rotate(-5deg);
+   }
+   100%{
+     transform: rotate(0);
+   }
+ }
+
+
+
