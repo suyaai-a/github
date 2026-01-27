@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiement 2</title>
+</head>
+<body>
+    
+    <h1>Experiment 2</h1>
+    <h2></h2>
+    
+    <!-- This experiment allows the users to pick a random color in the array. 
+    The first function sets up a random color by the number of colors that is in the array. The return function calls the random colors.
+    the guess function: when a user pick a random color and is guessed the right color by what the computer picked, then it is correct.
+    If the user picked a color that was not picked by the computer, then it is incorrect. The guess action at the bottom calls out the action from what the user input. -->
+    <script>
+        var userColor = prompt("Pick a color: red, yellow, green, or blue", "");
+        var colors = ["red", "yellow", "green", "blue"]
+        var answer = document.querySelector("h2");
+        var body = document.querySelector("body");
+
+        function randomColor(colors){
+            var random = Math.floor(Math.random()*colors.length);
+            return colors[random];
+        } 
+        var pickedColor = randomColor(colors);
+        function guess(){
+            if(userColor === pickedColor){ 
+            return answer.innerHTML = "correct";
+        }
+        else{ 
+            body.style.backgroundColor = pickedColor;
+            return answer.innerHTML =  `incorrect, the correct color is ${pickedColor}`;
+        }
+        }
+        guess()
+
+        // for(var i = 0; i<backgroundColor.length; i++ ){
+        //     if (colors[i]){
+        //         // background[i].style.backgroundColor = colors[i];
+        //         document.body.style.backgroundColor = colors[i];
+        //     }
+        // }
+
+    </script>
+</body>
+</html>
