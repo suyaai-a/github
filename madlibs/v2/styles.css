@@ -1,0 +1,143 @@
+body {
+    font-family: "Fredoka";
+    color: #333;
+    line-height: 1.5em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+header, footer {
+    background-color: #DB8EA9;
+    text-align: center;
+    height: 125px;
+    display: grid;
+    place-content: center;
+}
+
+#madlib-questions1 {
+    background-color: #F9F1E9;;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#madlib-questions2 {
+    background-color: #F9F1E9;;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#madlib-questions3 {
+    background-color: #F9F1E9;;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#output {
+    background-color: #F9F1E9;;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#madlib-questions1 h2 {
+    color: #764918;
+    font-family: "Akaya Kanadaka";
+    font-size: 40px;
+}
+
+#madlib-questions2 h2 {
+    color: #764918;
+    font-family: "Akaya Kanadaka";
+    font-size: 40px;
+}
+
+#madlib-questions3 h2 {
+    color: #764918;
+    font-family: "Akaya Kanadaka";
+    font-size: 40px;
+}
+
+#output h2 {
+    color: #764918;
+    font-family: "Akaya Kanadaka";
+    font-size: 40px;
+}
+
+
+main {
+    position: relative;
+    height: 650px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+article {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 40px;
+}
+
+/* Move the z-index declaration to each of the
+different sections below to put that section on
+top so you can design it. */
+
+#section-1 {background-color: #DDDDBE; z-index: 1; }
+#section-2 {background-color: #DDDDBE;  }
+#section-3 {background-color: #DDDDBE;  }
+#section-4 {background-color: #DDDDBE;   }
+
+
+form input, form label {
+    display: block;
+}
+
+form label {
+    font-family: "outfit";
+    font-size: 20px;
+}
+
+form input {
+    margin-bottom: 1em;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: #FEF9F2;
+    border: 2px solid #B69D84;
+}
+
+form a {
+    text-decoration: none;
+    font-family: "fredoka";
+    background-color: #B59C81;
+    color: white ;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+span {
+    font-weight: bold;
+}
