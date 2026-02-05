@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>MadLib V1</title>
+</head>
+<body>
+    <header>
+        <h1>Madlib Questions</h1>
+    </header>
+
+    <main>
+        <form>
+            <section id="section-1" class="showing">
+                <article>
+                    <h2>A Cafe Day</h2>
+                    <img src="images/coffee.png" alt="coffee cup with cat" width="500" height="500">
+                </article>
+                <article id="madlib-questions1">
+                    <h2>Part of 1 of 3</h2>
+                    
+                        <label for="adjective1">Adjective:</label>
+                        <input type="text" name="adjective" id="adjective1" required>
+
+                        <label for="verb2">Verb:</label>
+                        <input type="text" name="verb" id="verb2" required>
+
+                        <label for="adverb2">Adverb:</label>
+                        <input type="text" name="adverb" id="adverb2" required>
+
+                        <label for="number1">Number:</label>
+                        <input type="text" name="number" id="number1" required>
+                        
+                        <!-- <a href="#madlib-questions2" id="next1">Next</a> -->
+                        <!-- <input type="submit" value="Send"> -->
+                        <button id="next-1">Next</button>
+                     
+                </article>
+            </section>
+
+            <section id="section-2" class="hidden">
+                <article>
+                    <h2>A Cafe Day</h2>
+                    <img src="images/coffee.png" alt="coffee cup with cat" width="500" height="500">
+                </article>
+                <article id="madlib-questions2">
+                    <h2>Part of 2 of 3</h2>
+                    
+                        <label for="drink1">Drink:</label>
+                        <input type="text" name="drink" id="drink1" required>
+
+                        <label for="number2">Number:</label>
+                        <input type="text" name="number" id="number2" required>
+
+                        <label for="verb1">Verb:</label>
+                        <input type="text" name="verb" id="verb1" required>
+
+                        <label for="drink2">Drink:</label>
+                        <input type="text" name="drink" id="drink2" required>
+                        
+                        <!-- <a href="#madlib-questions3" id="next2">Next</a> -->
+                        <!-- <input type="submit" value="Send"> -->
+                        <button id="next-2">Next</button>
+                    
+                </article>
+            </section>
+
+            <section id="section-3" class="hidden">
+                <article>
+                    <h2>A Cafe Day</h2>
+                    <img src="images/coffee.png" alt="coffee cup with cat" width="500" height="500">
+                </article>
+                <article id="madlib-questions3">
+                    <h2>Part of 3 of 3</h2>
+                    
+                        <label for="adjective2">Adjective:</label>
+                        <input type="text" name="adjective" id="adjective2" required>
+
+                        <label for="food">Food:</label>
+                        <input type="text" name="food" id="food" required>
+
+                        <label for="adjective3">Adjective:</label>
+                        <input type="text" name="adjective" id="adjective3" required>
+
+                        <label for="adverb1">Adverb:</label>
+                        <input type="text" name="adverb" id="adverb1" required>
+                        
+                        <!-- <a href="#section-4" id="see-result">See Result</a> -->
+                        <input type="submit" value="submit" id="gotomadlib">
+                    
+                </article>
+            </section>
+        </form>
+        <section id="section-4" class="hidden">
+             <article>
+                <h2>A Cafe Day</h2>
+                <img src="images/coffee.png" alt="coffee cup with cat" width="500" height="500">
+            </article>
+
+            <article id="output">
+                <h2>MadLib Output</h2>
+                <div id="result"></div>
+                <!-- <a href="#madlib-questions1" id="start again">Start Again</a> -->
+            </article>
+        </section>
+    </main>
+</body>
+</html>
