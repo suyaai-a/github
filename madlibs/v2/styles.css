@@ -110,6 +110,21 @@ top so you can design it. */
 #section-3 {background-color: #DDDDBE;  }
 #section-4 {background-color: #DDDDBE;   } */
 
+#next-1, #next-2, #gotomadlib {
+    font-family: "Fredoka";
+    color: white;
+    background-color: #B59C81;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color:#B59C81 ;
+    font-size: 20px;
+}
+
+input {
+    padding: 9px;
+}
+
 .showing {
     visibility: visible;
 }
