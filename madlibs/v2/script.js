@@ -5,6 +5,8 @@
     const form = document.querySelector('form');
     const sections = document.querySelectorAll('section');
     const result = document.querySelector('#result');
+    
+
 
     document.querySelector('#next-1').addEventListener('click', function(e){
         if (document.querySelector('#adjective1').value == '') {
