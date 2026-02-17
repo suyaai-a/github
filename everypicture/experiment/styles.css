@@ -1,8 +1,6 @@
-/* body {
-    height: 750px;
-    width: 1200px;
-} */
-
+body {
+    background-color: rgb(238, 238, 214);
+}
 
 
 #section1 {
@@ -22,3 +20,532 @@
 img {
     gap: 20px;
 }
+
+h1 {
+    font-family: "baloo 2" ;
+    font-size: 35px;
+    margin: auto;
+    padding: 20px;
+    color: rgb(65, 56, 56);
+
+}
+
+
+
+
+.hidden3 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.close3 {
+    cursor: pointer;
+}
+
+/* start of section 1 */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s ease;
+}
+
+#overlay article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background-color: rgb(245, 220, 224);
+    border-radius: 20px;
+    padding: 20px;
+    width: 40vw;
+    height: 60vh;
+}
+
+#overlay h2 {
+    font-family: "outfit";
+    font-size: 30px;
+    color:#503e2b;
+    font-weight: 700;
+}
+
+#overlay p {
+    font-family: "fredoka" ;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #764108;
+}
+
+#overlay img {
+    float: left;
+    margin-right: 20px;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.close {
+    font-family: "Fredoka";
+    color: white;
+    background-color: #B59C81;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color:#B59C81 ;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.blur {
+    filter: blur(6.5px);
+    transition: filter 0.9s ease-in-out; 
+}
+
+.blur:hover {
+    filter: blur(0px);
+    cursor: pointer;
+    animation: wiggle 1.2s;
+}
+
+ @keyframes wiggle {
+   0% {
+     transform: rotate(0deg);
+   
+   }
+   25% {
+     transform: rotate(-7deg);
+   }
+   50% {
+     transform: rotate(7deg);
+   }
+   75% {
+     transform: rotate(-7deg);
+   }
+   100%{
+     transform: rotate(0);
+   }
+ }
+ /* end of section 1 */
+
+
+/* start of section 2 */
+#overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s ease;
+}
+
+#overlay2 article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background-color: rgb(245, 220, 224);
+    border-radius: 20px;
+    padding: 20px;
+    width: 40vw;
+    height: 60vh;
+}
+
+#overlay2 h2 {
+    font-family: "outfit";
+    font-size: 30px;
+    color:#503e2b;
+    font-weight: 700;
+}
+
+#overlay2 p {
+    font-family: "fredoka" ;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #764108;
+}
+
+#overlay2 img {
+    float: left;
+    margin-right: 20px;
+}
+
+.close2 {
+    font-family: "Fredoka";
+    color: white;
+    background-color: #B59C81;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color:#B59C81 ;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.hidden2 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blur2 {
+    filter: blur(6.5px);
+    transition: filter 0.9s ease-in-out; 
+}
+
+.blur2:hover {
+    filter: blur(0px);
+    cursor: pointer;
+    animation: wiggle 1.2s;
+}
+
+ @keyframes wiggle {
+   0% {
+     transform: rotate(0deg);
+   
+   }
+   25% {
+     transform: rotate(-7deg);
+   }
+   50% {
+     transform: rotate(7deg);
+   }
+   75% {
+     transform: rotate(-7deg);
+   }
+   100%{
+     transform: rotate(0);
+   }
+ }
+/* end of section 2 */
+
+
+/* start of section 3 */
+#overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s ease;
+}
+
+#overlay3 article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background-color: rgb(245, 220, 224);
+    border-radius: 20px;
+    padding: 20px;
+    width: 40vw;
+    height: 60vh;
+}
+
+#overlay3 h2 {
+    font-family: "outfit";
+    font-size: 30px;
+    color:#503e2b;
+    font-weight: 700;
+}
+
+#overlay3 p {
+    font-family: "fredoka" ;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #764108;
+}
+
+#overlay3 img {
+    float: left;
+    margin-right: 20px;
+}
+
+.close3 {
+    font-family: "Fredoka";
+    color: white;
+    background-color: #B59C81;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color:#B59C81 ;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.hidden3 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blur3 {
+    filter: blur(6.5px);
+    transition: filter 0.9s ease-in-out; 
+}
+
+.blur3:hover {
+    filter: blur(0px);
+    cursor: pointer;
+    animation: wiggle 1.2s;
+}
+
+ @keyframes wiggle {
+   0% {
+     transform: rotate(0deg);
+   
+   }
+   25% {
+     transform: rotate(-7deg);
+   }
+   50% {
+     transform: rotate(7deg);
+   }
+   75% {
+     transform: rotate(-7deg);
+   }
+   100%{
+     transform: rotate(0);
+   }
+ }
+/* end of section 3 */
+
+
+
+/* start of section 4 */
+#overlay4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s ease;
+}
+
+#overlay4 article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background-color: rgb(245, 220, 224);
+    border-radius: 20px;
+    padding: 20px;
+    width: 40vw;
+    height: 60vh;
+}
+
+#overlay4 h2 {
+    font-family: "outfit";
+    font-size: 30px;
+    color:#503e2b;
+    font-weight: 700;
+}
+
+#overlay4 p {
+    font-family: "fredoka" ;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #764108;
+}
+
+#overlay4 img {
+    float: left;
+    margin-right: 20px;
+}
+
+.close4 {
+    font-family: "Fredoka";
+    color: white;
+    background-color: #B59C81;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color:#B59C81 ;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.hidden4 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing4 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blur4 {
+    filter: blur(6.5px);
+    transition: filter 0.9s ease-in-out; 
+}
+
+.blur4:hover {
+    filter: blur(0px);
+    cursor: pointer;
+    animation: wiggle 1.2s;
+}
+
+ @keyframes wiggle {
+   0% {
+     transform: rotate(0deg);
+   
+   }
+   25% {
+     transform: rotate(-7deg);
+   }
+   50% {
+     transform: rotate(7deg);
+   }
+   75% {
+     transform: rotate(-7deg);
+   }
+   100%{
+     transform: rotate(0);
+   }
+ }
+/* end of section 4 */
+
+
+
+/* start of section 5 */
+#overlay5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s ease;
+}
+
+#overlay5 article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background-color: rgb(245, 220, 224);
+    border-radius: 20px;
+    padding: 20px;
+    width: 40vw;
+    height: 60vh;
+}
+
+#overlay5 h2 {
+    font-family: "outfit";
+    font-size: 30px;
+    color:#503e2b;
+    font-weight: 700;
+}
+
+#overlay5 p {
+    font-family: "fredoka" ;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #764108;
+}
+
+#overlay5 img {
+    float: left;
+    margin-right: 20px;
+}
+
+.close5 {
+    font-family: "Fredoka";
+    color: white;
+    background-color: #B59C81;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color:#B59C81 ;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.hidden5 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing5 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blur5 {
+    filter: blur(6.5px);
+    transition: filter 0.9s ease-in-out; 
+}
+
+.blur5:hover {
+    filter: blur(0px);
+    cursor: pointer;
+    animation: wiggle 1.2s;
+}
+
+ @keyframes wiggle {
+   0% {
+     transform: rotate(0deg);
+   
+   }
+   25% {
+     transform: rotate(-7deg);
+   }
+   50% {
+     transform: rotate(7deg);
+   }
+   75% {
+     transform: rotate(-7deg);
+   }
+   100%{
+     transform: rotate(0);
+   }
+ }
+/* end of section 5 */
