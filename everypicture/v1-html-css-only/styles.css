@@ -1,6 +1,71 @@
 body {
-    background-color: rgb(238, 238, 214);
+    background-color: url('v1.jpg');
 }
+
+/* svg img1 */
+/* .container{
+    max-width: 1000px;
+    aspect-ratio: 1000/659;
+    position: relative;
+    margin: auto;
+}
+
+img, svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+svg {
+    opacity: 1;
+    filter: blur(6.5px);
+}
+
+svg:hover {
+    filter: blur(0px);
+    transition: filter 0.9s ease-in-out; 
+    opacity: 0;
+    cursor: pointer;
+} */
+
+/* end of svg img1 */
+
+.container1{
+    position: relative;
+}
+
+.container1 img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto;
+    display: block;
+}
+
+.container1 h1{
+    position: absolute; /* Position the H1 relative to the container */
+    top: 50%; /* Start at the vertical midpoint */
+    left: 50%; /* Start at the horizontal midpoint */
+    transform: translate(-50%, -90%); /* Center the H1 precisely */
+    /* Add other styling as needed (font-size, background, z-index, etc.) */
+    /* z-index: 1; */
+}
+
+.container1 p{
+    position: absolute; /* Position the H1 relative to the container */
+    top: 50%; /* Start at the vertical midpoint */
+    left: 50%; /* Start at the horizontal midpoint */
+    transform: translate(-50%, 30%); /* Center the H1 precisely */
+    color: #764108;
+    font-family: "fredoka" ;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+#area1:hover{
+    cursor: pointer;
+}
+
+
 
 
 #section1 {
@@ -21,9 +86,9 @@ img {
     gap: 20px;
 }
 
-h1 {
+.container1 h1 {
     font-family: "baloo 2" ;
-    font-size: 35px;
+    font-size: 40px;
     margin: auto;
     padding: 20px;
     color: rgb(65, 56, 56);
@@ -33,7 +98,7 @@ h1 {
 
 
 
-/* .hidden3 {
+.hidden3 {
     visibility: hidden;
     opacity: 0;
 }
@@ -45,7 +110,7 @@ h1 {
 
 .close3 {
     cursor: pointer;
-} */
+}
 
 /* start of section 1 */
 #overlay {
@@ -67,7 +132,7 @@ h1 {
     background-color: rgb(245, 220, 224);
     border-radius: 20px;
     padding: 20px;
-    width: 40vw;
+    width: 50vw;
     height: 60vh;
 }
 
@@ -121,6 +186,7 @@ img {
     cursor: pointer;
 }
 
+
 .blur {
     filter: blur(6.5px);
     transition: filter 0.9s ease-in-out; 
@@ -173,7 +239,7 @@ img {
     background-color: rgb(245, 220, 224);
     border-radius: 20px;
     padding: 20px;
-    width: 40vw;
+    width: 50vw;
     height: 60vh;
 }
 
@@ -272,7 +338,7 @@ img {
     background-color: rgb(245, 220, 224);
     border-radius: 20px;
     padding: 20px;
-    width: 40vw;
+    width: 50vw;
     height: 60vh;
 }
 
@@ -372,7 +438,7 @@ img {
     background-color: rgb(245, 220, 224);
     border-radius: 20px;
     padding: 20px;
-    width: 40vw;
+    width: 50vw;
     height: 60vh;
 }
 
@@ -472,7 +538,7 @@ img {
     background-color: rgb(245, 220, 224);
     border-radius: 20px;
     padding: 20px;
-    width: 40vw;
+    width: 50vw;
     height: 60vh;
 }
 

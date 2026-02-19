@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Picture Experiment</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="script.js" defer></script> -->
+</head>
+
+
+
+<body>
+
+    <!-- <main>
+        <div class="container">
+            <img src="images/v1.jpg" alt="scrapbook" id="scrapbook">
+            
+
+            <svg viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect x="43" y="54" width="400" height="142" fill="#D9D9D9" id="img1"/>
+                <rect x="80" y="388" width="192" height="300" fill="#D9D9D9" id="img2"/>
+                <rect x="477" y="505" width="193" height="200" fill="#D9D9D9" id="img3"/>
+                <rect x="615" y="38" width="163" height="200" fill="#D9D9D9" id="img4"/>
+                <rect x="864" y="125" width="297" height="500" fill="#D9D9D9" id="img5"/>
+            </svg>
+
+        </div>
+    </main>
+
+
+    <script>
+        document.querySelector('#img1').addEventListener('click', function(event){
+            event.preventDefault();
+            document.querySelector('#overlay').className = 'showing';
+        });
+
+        document.querySelector('.close').addEventListener('click', function(){
+            event.preventDefault();
+            document.querySelector('#overlay').className = 'hidden';
+        });
+
+        document.querySelector('#img2').addEventListener('pointerenter', function(){
+            console.log('over cat 2');
+        });
+
+        document.querySelector('#img3').addEventListener('pointerenter', function(){
+            console.log('over cat 3');
+        });
+
+        document.querySelector('#img4').addEventListener('pointerenter', function(){
+            console.log('over cat 4');
+        });
+
+        document.querySelector('#img5').addEventListener('pointerenter', function(){
+            console.log('over cat 5');
+        });
+    </script>  -->
+
+
+    <div class="container1">
+        <h1>Scrapbook Memories</h1>
+        <p>Click on each image to reveal the mystery!</p>
+        <img src="images/v1.jpg" usemap="#image-map">
+
+        <map name="image-map">
+            <area id="area1" coords="42,53,443,196" shape="rect">
+            <area id="area2"coords="614,38,777,237" shape="rect">
+            <area id="area3" coords="79,387,271,688" shape="rect">
+            <area id="area4" coords="476,503,673,706" shape="rect">
+            <area id="area5" coords="1150,124,890,625" shape="rect">
+        </map>
+    </div>
+
+    <section id="overlay" class="hidden">
+        <article>
+            <h2>A's baseball game</h2>
+            <img src="images/baseball.jpeg" alt="baseball field" width="350" height="264">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+    <section id="overlay2" class="hidden2">
+        <article>
+            <h2>Dorm Name tag</h2>
+            <img src="images/roommate.jpeg" alt="picture of my roommate" width="350" height="260">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="close2">close</button>
+        </article>
+    </section>
+
+    <section id="overlay3" class="hidden3">
+        <article>
+            <h2>Yosemite Trip</h2>
+            <img src="images/tent.jpeg" alt="inside of a tent" width="266" height="300">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="close3">close</button>
+        </article>
+    </section>
+
+    <section id="overlay4" class="hidden4">
+        <article>
+            <h2>Inside Out movie with Mom</h2>
+            <img src="images/placeholder (1).png" alt="placeholder" width="350" height="350">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="close4">close</button>
+        </article>
+    </section>
+
+    <section id="overlay5" class="hidden5">
+        <article>
+            <h2>Minions movie with Mom</h2>
+            <img src="images/placeholder (1).png" alt="placeholder" width="350" height="350">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="close5">close</button>
+        </article>
+    </section>
+
+    <script>
+        const area1 = document.querySelector('#area1');
+        const area2 = document.querySelector('#area2');
+        const area3 = document.querySelector('#area3');
+        const area4 = document.querySelector('#area4');
+        const area5 = document.querySelector('#area5');
+
+        area1.addEventListener('click', function(event){
+            event.preventDefault();
+            document.querySelector('#overlay').className = 'showing';
+        });
+
+        document.querySelector('.close').addEventListener('click', function(){
+            event.preventDefault();
+            document.querySelector('#overlay').className = 'hidden';
+        });
+
+
+        area2.addEventListener('click', function(event){
+            event.preventDefault();
+            document.querySelector('#overlay5').className = 'showing2';
+        });
+
+        document.querySelector('.close5').addEventListener('click', function(){
+            event.preventDefault();
+            document.querySelector('#overlay5').className = 'hidden5';
+        });
+
+
+        area3.addEventListener('click', function(event){
+            event.preventDefault();
+            document.querySelector('#overlay3').className = 'showing3';
+        });
+
+        document.querySelector('.close3').addEventListener('click', function(){
+            event.preventDefault();
+            document.querySelector('#overlay3').className = 'hidden3';
+        });
+
+
+        area4.addEventListener('click', function(event){
+            event.preventDefault();
+            document.querySelector('#overlay4').className = 'showing4';
+        });
+
+        document.querySelector('.close4').addEventListener('click', function(){
+            event.preventDefault();
+            document.querySelector('#overlay4').className = 'hidden4';
+        });
+
+
+        area5.addEventListener('click', function(event){
+            event.preventDefault();
+            document.querySelector('#overlay2').className = 'showing2';
+        });
+
+        document.querySelector('.close2').addEventListener('click', function(){
+            event.preventDefault();
+            document.querySelector('#overlay2').className = 'hidden2';
+        });
+    </script>
+
+</body>
+</html>
