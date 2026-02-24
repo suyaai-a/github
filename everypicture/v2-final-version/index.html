@@ -19,13 +19,10 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-
-    
-
-    <section>
+    <section id="interfaceSection">
         <div class="container1">
             <h1>Scrapbook Memories</h1>
-            <p>Click on each image to reveal the mystery!</p>
+            <p>Hover over each image to reveal the mystery, <br>then click on it to see more!</p>
         </div>
 
         <div class="open">
@@ -47,89 +44,87 @@
         <div class="open5">
             <img class="blur5" src="images/minions.jpeg" alt="minions movie ticket" width="163" height="200">
         </div>
-        
-
     </section>
         
 
-    <!-- <main>
-       
+    <section id="overlay" class="hidden">    
+        <div class="overlayContainer">
+            <!-- glenda moved h2 here -->
+            <h2>A's baseball game</h2>
 
-        <div id="section2">
-            <div class="open">
-                <img class="blur" src="images/asgame (1).jpeg" alt="picture of yosemite" width="400" height="142">
-            </div>
-        </div>
-
-        <div id="section1">
-            <div class="open2">
-                <img class="blur2" src="images/nametags.png" alt="picture of yosemite" width="297" height="500">
-            </div>
-
-            <div class="open3">
-                <img class="blur3" src="images/yosemite (1).jpeg" alt="picture of yosemite" width="191" height="300">
-            </div>
-
-            <div class="open4">
-                <img class="blur4" src="images/insideout.jpeg" alt="picture of yosemite" width="193" height="200">
-            </div>
-
-            <div class="open5">
-                <img class="blur5" src="images/minions.jpeg" alt="picture of yosemite" width="163" height="200">
-            </div>
-        </div>
-
-    
-    </main> -->
-
-    <section id="overlay" class="hidden">
-        <div class="overlaycontainer">
-            <img src="images/baseball.jpeg" alt="baseball field" width="350" height="264">
+            <!--  glenda added div here for flexbox -->
+            <div>
+                <img src="images/baseball.jpeg" alt="baseball field" width="350" height="264">
         
-            <div class="content">
-                <h2>A's baseball game</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                <button class="close">close</button>
+            <!-- glenda removed the div around the p because the p is enough -->
+                <p>During my junior year of high school, I attended my first baseball game at the A’s with my youth group! I never understood how baseball works but it was a really exciting experience just being with my friends and mentor. This was also my first time being at the Oakland Stadium even though I’ve always driven by it. </p>
+                
             </div>
+
+            <!-- glenda moved the close button outside of the flexbox -->
+            <!-- <button class="close">close</button> -->
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     </section>
 
-    <section id="overlay2" class="hidden2">
-        <article>
+    <section id="overlay2" class="hidden">
+        <div class="overlayContainer">
             <h2>Dorm Name tag</h2>
-            <img src="images/roommate.jpeg" alt="picture of my roommate" width="350" height="260">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="close2">close</button>
-        </article>
+            <!-- glenda added the div -->
+            <div>
+                <img src="images/roommate.jpeg" alt="picture of my roommate" width="350" height="260">
+                <p>I joined the STEP program during my first summer before my Freshman year. This is where I meet most of the first generation college students. I got paired with my amazing roommate, Avaa who I got close with throughout the year! She made college a less scary experience and until today she is still my best friend!</p>
+            </div>
+            <!-- <button class="close" id="close2">close</button> -->
+            <button type="button" class="close" id="close2" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </section>
 
-    <section id="overlay3" class="hidden3">
-        <article>
+    <section id="overlay3" class="hidden">
+        <div class="overlayContainer">
             <h2>Yosemite Trip</h2>
-            <img src="images/tent.jpeg" alt="inside of a tent" width="266" height="300">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="close3">close</button>
-        </article>
+            <div>
+                <img src="images/tent.jpeg" alt="inside of a tent" width="266" height="300">
+                <p>This was my first camping trip in the snow when I was in 5th grade! As an immigrant, I never got to experience camping when I was in China. The experience taught me survival skills and making lasting memories from my elementary school.</p>
+            </div>
+            <!-- <button class="close" id="close3">close</button> -->
+            <button type="button" class="close" id="close3" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </section>
 
-    <section id="overlay4" class="hidden4">
-        <article>
+    <section id="overlay4" class="hidden">
+        <div class="overlayContainer">
             <h2>Inside Out movie with Mom</h2>
-            <img src="images/placeholder (1).png" alt="placeholder" width="350" height="350">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="close4">close</button>
-        </article>
+            <div>
+                <img src="images/theatre.png" alt="placeholder" width="350" height="260">
+                <p>Growing up in China, I never got to experience the luxury of watching movies in a theatre. Coming to the US, I get to experience many things with my mom, such as going to the theatre. Looking back, the physical movie ticket gives me nostalgia as they have become digital now.</p>
+            </div>
+            <!-- <button class="close4">close</button> -->
+            <button type="button" class="close" id="close4" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </section>
 
-    <section id="overlay5" class="hidden5">
-        <article>
+    <section id="overlay5" class="hidden">
+        <div class="overlayContainer">
             <h2>Minions movie with Mom</h2>
-            <img src="images/placeholder (1).png" alt="placeholder" width="350" height="350">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="close5">close</button>
-        </article>
+            <div>
+                <img src="images/miniondrawing.png" alt="drawing of a minion" width="350" height="260">
+                <p>When I first saw the Minions movie, I loved how adorable the animations are. Back when I was in Elementary school, there was less flexibility to watch it with friends and I’ve always experienced new things with my mom. I always cherish all the moments that I have with her!</p>
+            </div>
+            <!-- <button class="close5">close</button> -->
+            <button type="button" class="close" id="close5" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </section>
-
 
 </body>
 </html>
