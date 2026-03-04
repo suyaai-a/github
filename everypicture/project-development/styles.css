@@ -1,0 +1,212 @@
+/* basic reset start */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* end basic reset */
+
+
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;  
+}
+
+section {
+    width: 1200px;
+    height: 750px;
+}
+
+h1 {
+    font-family: "baloo 2" ;
+    font-size: 35px;
+    margin: auto;
+    padding: 20px;
+    color: rgb(65, 56, 56);
+}
+
+.container1 h1{
+    position: absolute; /* Position the H1 relative to the container */
+    top: 50%; /* Start at the vertical midpoint */
+    left: 50%; /* Start at the horizontal midpoint */
+    transform: translate(-50%, -90%); /* Center the H1 precisely */
+    /* Add other styling as needed (font-size, background, z-index, etc.) */
+    /* z-index: 1; */
+}
+
+.container1 p{
+    position: absolute; /* Position the H1 relative to the container */
+    top: 50%; /* Start at the vertical midpoint */
+    left: 50%; /* Start at the horizontal midpoint */
+    transform: translate(-50%, -20%); /* Center the H1 precisely */
+    color: #764108;
+    font-family: "fredoka" ;
+    font-size: 18px;
+    line-height: 1.5em;
+    text-align: center;
+    /* z-index: 1; */
+}
+
+section {
+    position: absolute;
+    top: 50%; 
+    left: 50%;  
+    transform: translate(-50%, -50%);
+}
+
+
+#interfaceSection img {
+    /* from glenda this is causing a conflict with the flexbox, solution is to use a more specific selector than "section" */
+    position: absolute;  
+}
+
+.blur {
+    top: 54px;
+    left: 43px;
+}
+
+.blur2{
+    top: 125px;
+    left: 864px;
+}
+
+.blur3{
+    top: 388px;
+    left: 81px;
+}
+
+.blur4{
+    left: 477px;
+    top: 505px;
+}
+
+.blur5{
+    left: 615px;
+    top: 38px;
+}
+
+img {
+    gap: 20px;
+}
+
+/* Overlays*/
+#overlay, #overlay2, #overlay3, #overlay4, #overlay5 {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s ease;
+    /* glenda added grid */
+    display: grid;
+    place-content: center;
+}
+
+/* glenda added */
+.overlayContainer {
+    /* glenda added to position for the close button */
+    position: relative;
+    width: 50vw;
+    /* height: 30vw; */
+    background-color: rgb(228, 242, 243);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.overlayContainer div {
+    display: flex;
+    /* vertical alignment */
+    align-items: center; 
+    gap: 50px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: "Fredoka";
+    color: white;
+    background-color: #54673f;
+    padding: 8px;
+    border-radius: 100px;
+    border: none;
+    font-size: 2em;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: rgb(255, 255, 255);
+    background-color: #8ba371;
+}
+
+
+.overlayContainer h2 {
+    font-family: "outfit";
+    font-size: 30px;
+    color:#514279;
+    font-weight: 700;
+    /* background-color: yellow; */
+}
+
+.overlayContainer p {
+    font-family: "fredoka" ;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #5a4b6b;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.blur, .blur2, .blur3, .blur4, .blur5 {
+    filter: blur(6.5px);
+    transition: filter 0.9s ease-in-out; 
+}
+
+.blur:hover, .blur2:hover, .blur3:hover, .blur4:hover, .blur5:hover {
+    filter: blur(0px);
+    cursor: pointer;
+    animation: wiggle 1.2s;
+}
+
+ @keyframes wiggle {
+   0% {
+     transform: rotate(0deg);
+   
+   }
+   25% {
+     transform: rotate(-7deg);
+   }
+   50% {
+     transform: rotate(7deg);
+   }
+   75% {
+     transform: rotate(-7deg);
+   }
+   100%{
+     transform: rotate(0);
+   }
+ }
+ /* end of overlay */
