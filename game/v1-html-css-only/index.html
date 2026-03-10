@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Game of CATS!</h1>
@@ -37,12 +38,32 @@
         <section id="playscreen" class="hidden">
             <div id="player1">
                 <div id="score1">
-                    <p>Player 1: 0 Points</p>
+                    <p>Player 1:<br> 0 Points</p>
+                    <img src="images/orangecat.png" alt="orange cat" height="140" width="140">
                 </div>
-                <img src="images/orangecat.png" alt="orange cat" height="140" width="140">
-                <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                <img src="images/blankcard.png" alt="card cover" height="326" width="210">
 
+                <div id="flip-card-back1">
+                    <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                    <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                </div>
+
+                <!-- <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front1">
+                            <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        </div>
+                        <div class="flip-card-front2">
+                            <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        </div>
+                        <div class="flip-card-back1">
+                            <img src="images/card1.png" alt="card1" height="326" width="210">
+                        </div>
+                        <div class="flip-card-back2">
+                            <img src="images/card1.png" alt="card1" height="326" width="210">
+                        </div>
+                    </div>
+                </div> -->
+                
                 <div id="actions1">
                     <button id="flip1">Flip</button>
                     <button id="pass1">Pass</button>
@@ -51,11 +72,14 @@
 
             <div id="player2">
                 <div id="score2">
-                    <p>Player 2: 0 Points</p>
+                    <p>Player 2:<br> 0 Points</p>
+                    <img src="images/browncat.png" alt="brown cat" height="140" width="140">
                 </div>
-                <img src="images/browncat.png" alt="brown cat" height="140" width="140">
-                <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+
+                <div id="flip-card-back2">
+                    <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                    <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                </div>
 
                 <div id="actions2">
                     <button id="flip2">Flip</button>
@@ -64,8 +88,13 @@
             </div>
         </section>
 
+        <section id="message" class="hidden">
+            <div id="overlaymsg">
+                <p>Overlay message goes here...</p>
+            </div>
+        </section>
+
         <div id="gamecontrol"></div>
-        <div id="message"></div>
     </main>
 </body>
 </html>
