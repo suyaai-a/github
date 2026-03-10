@@ -77,11 +77,12 @@ section {
     gap: 140px;
 }
 
-#blankcards1, #blankcards2 {
+#flip-card-back1, #flip-card-back2 {
     gap: 50px;
     display: flex;
     margin-bottom: 30px;
 }
+
 
 #score1, #score2 {
     display: flex;
