@@ -1,0 +1,152 @@
+body {
+    background-color: #EFFAFF;
+    max-width: 1200px;
+    max-height: 750px;
+}
+
+h1 {
+    font-family: "Gorditas";
+    font-size: 55px;
+    color: #B25628;
+    text-align: center;
+}
+
+#homepage {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    gap: 80px;
+    margin-top: 100px ;
+}
+
+#cats {
+    gap: 200px;
+    display: flex;
+}
+
+#startgame {
+    text-align: center; 
+}
+
+#start {
+    background-color: #814FA6;
+    font-family: "Zain";
+    color: white;
+    padding: 15px;
+    border-style: none;
+    font-size: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#score {
+    font-family: 'Sniglet';
+    font-size: 26px;
+    color: #614324;
+}
+
+.showing {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+main {
+    position: relative;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#homepage {
+    background-color: #EFFAFF;
+}
+
+#playscreen {
+    background-color: #EFFAFF;
+    gap: 140px;
+}
+
+#blankcards1, #blankcards2 {
+    gap: 50px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#score1, #score2 {
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    font-family: 'Sniglet';
+    color: #614324;
+    font-size: 26px;
+}
+
+#actions1, #actions2 {
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+}
+
+#flip1, #flip2 {
+    font-family: 'Zain' ;
+    background-color: #9D7FE3;
+    color: white;
+    font-size: 24px;
+    border-style: none;
+    padding: 20px;
+    border-radius: 8px;
+
+    text-align: center;
+    display: block;
+}
+
+#pass1, #pass2 {
+    font-family: 'Zain' ;
+    background-color: #06CEA0;
+    color: white;
+    font-size: 24px;
+    border-style: none;
+    padding: 20px;
+    border-radius: 8px;
+    
+    text-align: center;
+    display: block;
+}
+
+#message {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100vw;
+    /* height: 100vh; */
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 1s ease;
+    display: grid;
+    place-content: center;
+}
+
+#overlaymsg {
+    width: 528px;
+    height: 190px ;
+    background-color: #6C87B1;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#overlaymsg p {
+    font-family: 'Sniglet';
+    color: white;
+    font-size: 20px ;
+    text-align: center;
+}
