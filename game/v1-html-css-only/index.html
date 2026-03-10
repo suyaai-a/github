@@ -23,7 +23,7 @@
     <h1>Game of CATS!</h1>
 
     <main>
-        <section id="homepage" class="showing">
+        <section id="homepage" class="hidden">
 
             <div id="cats">
                 <img src="images/brownhome.png" alt="brown cat" height="220" width="220">
@@ -35,32 +35,27 @@
             </div>
         </section>
 
-        <section id="playscreen" class="hidden">
+        <section id="playscreen" class="showing">
             <div id="player1">
                 <div id="score1">
                     <p>Player 1:<br> 0 Points</p>
                     <img src="images/orangecat.png" alt="orange cat" height="140" width="140">
                 </div>
 
-                <div id="flip-card-back1">
+                <div id="card1">
                     <img src="images/blankcard.png" alt="card cover" height="326" width="210">
                     <img src="images/blankcard.png" alt="card cover" height="326" width="210">
                 </div>
 
-                <!-- <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front1">
-                            <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                        </div>
-                        <div class="flip-card-front2">
-                            <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                        </div>
-                        <div class="flip-card-back1">
-                            <img src="images/card1.png" alt="card1" height="326" width="210">
-                        </div>
-                        <div class="flip-card-back2">
-                            <img src="images/card1.png" alt="card1" height="326" width="210">
-                        </div>
+                <!-- <div id="card1">
+                    <div id="flip1">
+                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        <img src="images/card1.png" alt="card1" height="326" width="210">
+                    </div>
+                        
+                    <div id="flip2">
+                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        <img src="images/card1.png" alt="card1" height="326" width="210">
                     </div>
                 </div> -->
                 
@@ -76,10 +71,26 @@
                     <img src="images/browncat.png" alt="brown cat" height="140" width="140">
                 </div>
 
-                <div id="flip-card-back2">
-                    <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                    <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                <div id="card2">
+                    <!-- <div id="flip2"> -->
+                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        <img src="images/card1.png" alt="card1" height="326" width="210">
+                    <!-- </div> -->
                 </div>
+
+                <!-- <div id="card2">
+                    
+                    <div id="flip1">
+                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                         <img src="images/card1.png" alt="card1" height="326" width="210">
+                    </div>
+                        
+                    <div id="flip2">
+                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        <img src="images/card1.png" alt="card1" height="326" width="210">
+                    </div>
+                    
+                </div> -->
 
                 <div id="actions2">
                     <button id="flip2">Flip</button>
@@ -88,13 +99,15 @@
             </div>
         </section>
 
-        <section id="message" class="hidden">
+        <section id="gamecontrol">
+            <button></button>
+        </section>
+    </main>
+
+    <section id="message" class="hidden">
             <div id="overlaymsg">
                 <p>Overlay message goes here...</p>
             </div>
-        </section>
-
-        <div id="gamecontrol"></div>
-    </main>
+    </section>
 </body>
 </html>
