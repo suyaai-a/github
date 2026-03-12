@@ -148,8 +148,8 @@
     }
 
     function showCurrentScore(){
-        score1.innerHTML = `<p>Player 1:<strong> ${gameData.score[0]}</strong> <img src = "images/browncat.png"></p>`
-        score2.innerHTML = `<p>Player 2:<strong> ${gameData.score[1]}</strong> <img src = "images/orangecat.png"></p>`
+        score1.innerHTML = `<p>Player 1:<strong><br> ${gameData.score[0]}</strong> <img src="images/browncat.png" alt="brown cat" height="140" width="140"></p>`
+        score2.innerHTML = `<p>Player 2:<strong><br> ${gameData.score[1]}</strong> <img src="images/orangecat.png" alt="orange cat" height="140" width="140"></p>`
     }
 
     
