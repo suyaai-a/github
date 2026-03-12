@@ -7,6 +7,8 @@
     const start = document.querySelector('#start');
     const flip1 = document.querySelector('#flip1');
     const flip2 = document.querySelector('#flip2');
+    const pass1 = document.querySelector('#pass1');
+    const pass2 = document.querySelector('#pass2');
     const overlay = document.querySelector('#overlaymsg p')
     const card1 = document.querySelector('#card1');
     const card2 = document.querySelector('#card2');
