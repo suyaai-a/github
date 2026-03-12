@@ -28,9 +28,8 @@
         score: [0, 0],
         shuffle1: 0,
         shuffle2: 0,
-        sum: 0,
-        index: 0, 
-        // index: which player turn it is
+        rollSum: 0,
+        index: 0,
         gameEnd: 29
 
     };
@@ -88,6 +87,10 @@
     // function throwDice(){
     //     gameData.rollSum = gameData.shuffle1 + gameData.shuffle2;
     // }
+
+    function throwDice(){
+        gameData.rollSum = gameData.shuffle1 + gameData.shuffle2;
+    }
 
     
 })();
