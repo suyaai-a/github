@@ -63,28 +63,31 @@
         shuffleCard();
     }
 
+    // flip1.addEventListener('click', function(){
+    //     player1score.innerHTML = `<p>Player 1:<br> ${gameData.score[gameData.index]}</p>`;
+    //     playscreen.innerHTML += `<img src="images/${gameData.deck[gameData.shuffle1-1]}"> <img src="images/${gameData.deck[gameData.shuffle2-1]}">`;
+    // });
+
     function shuffleCard(){
-        gameData.shuffle1 = Math.floor(Math.random()* 6) + 1;
-        gameData.shuffle2 = Math.floor(Math.random()* 6) + 1;
+        document.querySelector('#flip1').addEventListener('click', function(){
+            gameData.shuffle1 = Math.floor(Math.random()* 6) + 1;
+            gameData.shuffle2 = Math.floor(Math.random()* 6) + 1;
+
+            firstcard.innerHTML = `<img src="images/${gameData.deck[gameData.shuffle1-1]}">`;
+            secondcard.innerHTML = `<img src="images/${gameData.deck[gameData.shuffle2-1]}">`;
+            gameData.sum = gameData.shuffle1 + gameData.shuffle2;
+        });
+        
         // console.log(gameData.roll1, gameData.roll2);
         // gameData.roll1 = 1;
         // gameData.roll2 = 1;
-
-        overlay.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-        card1.innerHTML += `<img src="images/${gameData.dice[gameData.shuffle2-1]}"> <img src="images/${gameData.dice[gameData.shuffle2-1]}">`;
-        card2.innerHTML += `<img src="images/${gameData.dice[gameData.shuffle2-1]}"> <img src="images/${gameData.dice[gameData.shuffle2-1]}">`;
-        gameData.rollSum = gameData.roll1 + gameData.roll2;
     }
 
-    flip1.addEventListener('click', function(){
-        player1score.innerHTML = `<p>Player 1:<br> ${gameData.score[gameData.index]}</p>`;
-        playscreen.innerHTML += `<img src="images/${gameData.deck[gameData.shuffle1-1]}"> <img src="images/${gameData.deck[gameData.shuffle2-1]}">`;
-        throwDice();
-    });
 
-    function throwDice(){
-        gameData.rollSum = gameData.shuffle1 + gameData.shuffle2;
-    }
+
+    // function throwDice(){
+    //     gameData.rollSum = gameData.shuffle1 + gameData.shuffle2;
+    // }
 
     
 })();
