@@ -137,10 +137,9 @@
 
     function checkWinningCondition(){
         if(gameData.score[gameData.index] /* current player score */ > gameData.gameEnd /*game end point */){
-            score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+            overlay.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
 
-            overlay.innerHTML = '';
-            document.querySelector('#quit').innerHTML = 'start a new game?';
+            document.querySelector('#overlaymsg').innerHTML = 'start a new game?';
         } else {
             // showCurrentScore() function will go here...
             showCurrentScore();
@@ -148,8 +147,8 @@
     }
 
     function showCurrentScore(){
-        score1.innerHTML = `<p>Player 1:<strong><br> ${gameData.score[0]}</strong> <img src="images/browncat.png" alt="brown cat" height="140" width="140"></p>`
-        score2.innerHTML = `<p>Player 2:<strong><br> ${gameData.score[1]}</strong> <img src="images/orangecat.png" alt="orange cat" height="140" width="140"></p>`
+        score1.innerHTML = `<p>Player 1:<strong><br> ${gameData.score[0]}</strong> points</p> <img src="images/orangecat.png" alt="orange cat" height="140" width="140">`
+        score2.innerHTML = `<p>Player 2:<strong><br> ${gameData.score[1]}</strong> points</p> <img src="images/browncat.png" alt="brown cat" height="140" width="140">`
     }
 
     
