@@ -7,15 +7,20 @@
     const start = document.querySelector('#start');
     const flip1 = document.querySelector('#flip1');
     const flip2 = document.querySelector('#flip2');
+    const pass1 = document.querySelector('#pass1');
+    const pass2 = document.querySelector('#pass2');
     const overlay = document.querySelector('#overlaymsg p')
     const card1 = document.querySelector('#card1');
     const card2 = document.querySelector('#card2');
-    const score1 = document.querySelector('#score1');
-    const score2 = document.querySelector('#score2');
-    const score = document.querySelector('#score1, #score2');
-
+    const p1score = document.querySelector('#p1score');
+    const p2score = document.querySelector('#p2score');
     const actions1 = document.querySelector('#actions1');
     const actions2 = document.querySelector('#actions2');
+    const endscreen = document.querySelector('#endscreen');
+    const newgame = document.querySelector('#newgame');
+    const endscreenText = document.querySelector('#endscreen p');
+    const overlaySection = document.querySelector('#message'); 
+    const overlayText = document.querySelector('#overlaymsg p'); 
 
     const gameData = {
         deck: [
@@ -47,11 +52,31 @@
     });
 
     flip1.addEventListener('click', function(){
-        shuffleCard();
+        if(gameData.index === 0){
+            card1.classList.add('flipped'); 
+            shuffleCard(); 
+        }
     });
 
     flip2.addEventListener('click', function(){
-        shuffleCard();
+        if(gameData.index === 1){
+            card2.classList.add('flipped'); 
+            shuffleCard(); 
+        }
+    });
+
+    pass1.addEventListener('click', function(){
+        if(gameData.index === 0){
+            gameData.index = 1;
+            setUpTurn();
+        }
+    });
+
+    pass2.addEventListener('click', function(){
+        if(gameData.index === 1){
+            gameData.index = 0;
+            setUpTurn();
+        }
     });
 
     function setUpTurn(){
@@ -70,16 +95,21 @@
 
         setTimeout(function(){
             document.querySelector('#message').classList = 'hidden';
-        },2000);
+        },2500);
 
     }
 
-    // flip1.addEventListener('click', function(){
-    //     player1score.innerHTML = `<p>Player 1:<br> ${gameData.score[gameData.index]}</p>`;
-    //     playscreen.innerHTML += `<img src="images/${gameData.deck[gameData.shuffle1-1]}"> <img src="images/${gameData.deck[gameData.shuffle2-1]}">`;
-    // });
+    function showOverlay(msg, duration = 2500) {
+        overlayText.textContent = msg;
+        overlaySection.classList.add('showing');
+        overlaySection.classList.remove('hidden');
 
-    
+        setTimeout(() => {
+            overlaySection.classList.add('hidden');
+            overlaySection.classList.remove('showing');
+        }, duration);
+    }
+
 
     function shuffleCard(){
 
@@ -96,59 +126,58 @@
 
         gameData.sum = gameData.shuffle1 + gameData.shuffle2;
 
-         // if two 1's are rolled
-        if(gameData.sum === 2){
-            console.log('snake eyes!');
-            overlay.innerHTML += '<p>Oh snap! Snake eyes!</p>';
-            // set the score for the current player
-            gameData.score[gameData.index]= 0;
-            gameData.index ? (gameData.index=0) : (gameData.index=1);
-            // we will add ShowCurrentScore() function here
+        if (gameData.sum === 2) {
+            gameData.score[gameData.index] = 0;
+            gameData.index = gameData.index === 0 ? 1 : 0;
             showCurrentScore();
-            // wait 2 seconds
-            setTimeout(setUpTurn, 2000);
-        }
-        // if either die is a 1
-        else if(gameData.shuffle1 === 1 || gameData.shuffle2 === 1){
-            console.log('one of the two decks is a 1');
-            gameData.index ? (gameData.index=0) : (gameData.index=1);
-            overlay.innerHTML += `<p>Sorry, one of your rolls was one, switching to ${gameData.players[gameData.index]}</p>`;
-            setTimeout(setUpTurn, 2000);
-        }
-
-        // if neither die is a 1
-        else {
-            console.log('neither die was a 1, game continues...');
-            gameData.score[gameData.index] = gameData.score [gameData.index] + gameData.sum;
-            // actionArea.innerHTML= '<button id="rollagain">Roll again</button> or <button id = "pass">Pass</button>';
-
-            // document.querySelector('#rollagain').addEventListener('click', function(){
-            //     shuffleCard();
-            // });
-
-            // document.querySelector('#pass').addEventListener('click', function(){
-            //     gameData.index ? (gameData.index=0) : (gameData.index=1);
-            //     setUpTurn();
-            // });
+            showOverlay('Oh snap! Snake eyes!', 2500);
+            setTimeout(setUpTurn, 2500);
+        } else if (gameData.shuffle1 === 1 || gameData.shuffle2 === 1) {
+            gameData.index = gameData.index === 0 ? 1 : 0;
+            showOverlay(`Sorry, one of your rolls was one, switching to ${gameData.players[gameData.index]}`, 2500);
+            setTimeout(setUpTurn, 2500);
+        } else {
+            gameData.score[gameData.index] += gameData.sum;
             checkWinningCondition();
         }
-        
     }
 
     function checkWinningCondition(){
-        if(gameData.score[gameData.index] /* current player score */ > gameData.gameEnd /*game end point */){
-            overlay.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
 
-            document.querySelector('#overlaymsg').innerHTML = 'start a new game?';
+        if(gameData.score[gameData.index] >= gameData.gameEnd){
+
+            const endscreen = document.querySelector('#endscreen');
+
+            endscreen.classList = "showing";
+
+            endscreenText.textContent =
+            `${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!`;
+
+            actions1.classList = "hidden";
+            actions2.classList = "hidden";
+
+            newgame.addEventListener('click', function(){
+                location.reload();
+            });
+
+            // document.querySelector('#newgame').addEventListener('click', function(){
+            //     location.reload();
+            // });
+
+            // document.querySelector('#quitgame').addEventListener('click', function(){
+            //     window.close();
+            // });
+
         } else {
-            // showCurrentScore() function will go here...
+
             showCurrentScore();
+
         }
     }
 
     function showCurrentScore(){
-        score1.innerHTML = `<p>Player 1:<strong><br> ${gameData.score[0]}</strong> points</p> <img src="images/orangecat.png" alt="orange cat" height="140" width="140">`
-        score2.innerHTML = `<p>Player 2:<strong><br> ${gameData.score[1]}</strong> points</p> <img src="images/browncat.png" alt="brown cat" height="140" width="140">`
+        p1score.textContent = gameData.score[0];
+        p2score.textContent = gameData.score[1];
     }
 
     

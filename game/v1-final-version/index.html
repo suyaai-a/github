@@ -30,6 +30,10 @@
                 <img src="images/orangehome.png" alt="orange cat" height="220" width="220">
             </div>
 
+            <div id="context">
+                <p>Game will randomly pick the first player</p>
+            </div>
+
             <div id="startgame">
                 <button id="start">START</button>
             </div>
@@ -38,13 +42,14 @@
         <section id="playscreen" class="hidden">
             <div id="player1">
                 <div id="score1">
-                    <p>Player 1:<br> 0 Points</p>
-                    <img src="images/orangecat.png" alt="orange cat" height="140" width="140">
+                    <p>Player 1: <br><strong id="p1score">0</strong> points</p>
+                    <img src="images/browncat.png">
                 </div>
 
                 <div id="card1">
                     <img id="firstcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
                     <img id="secondcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
+                    <!-- <img id="secondcard" src="images/card1.png" alt="card1" height="326" width="210"> -->
                 </div>
 
                 <!-- <div id="card1">
@@ -67,8 +72,8 @@
 
             <div id="player2">
                 <div id="score2">
-                    <p>Player 2:<br> 0 Points</p>
-                    <img src="images/browncat.png" alt="brown cat" height="140" width="140">
+                    <p>Player 1: <br><strong id="p2score">0</strong> points</p>
+                    <img src="images/orangecat.png">
                 </div>
 
                 <div id="card2">
@@ -97,17 +102,24 @@
             </div>
         </section>
 
-        <section id="gamecontrol">
+        <!-- <section id="gamecontrol">
             <div>
                 <button></button>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <section id="message" class="hidden">
-            <div id="overlaymsg">
-                <p>Overlay message goes here...</p>
-            </div>
+        <div id="overlaymsg">
+            <p>Overlay message goes here...</p>
+        </div>
+    </section>
+
+    <section id="endscreen" class="hidden">
+        <div id="newgamemsg">
+            <p>Player 1 ends with 36 points</p>
+            <button id="newgame">Start a new game</button>
+        </div>
     </section>
 </body>
 </html>

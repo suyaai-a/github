@@ -2,6 +2,7 @@ body {
     background-color: #EFFAFF;
     max-width: 1200px;
     max-height: 750px;
+    margin: auto;
 }
 
 h1 {
@@ -16,8 +17,14 @@ h1 {
     flex-direction: column; 
     align-items: center; 
     text-align: center;
-    gap: 80px;
-    margin-top: 100px ;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+#context {
+    font-family: 'Sniglet';
+    font-size: 20px;
+    color: #814FA6 ;
 }
 
 #cats {
@@ -48,10 +55,12 @@ h1 {
 
 .showing {
     visibility: visible;
+    opacity: 1;
 }
 
 .hidden {
     visibility: hidden;
+    opacity: 0;
 }
 
 main {
@@ -79,8 +88,6 @@ section {
     gap: 140px;
 }
 
-
-
 #card1, #card2 {
     /* background-color: transparent;
     width: 300px;
@@ -92,21 +99,37 @@ section {
     margin-bottom: 30px;
 }
 
-
-/* Do an horizontal flip when you move the mouse over the flip box container
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+/* #firstcard, #secondcard {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
 }
 
-Position the front and back side
-#flip1, #flip2 {
-    
-    gap: 2rem;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+#firstcard {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+#secondcard {
+    transform: rotateY(180deg); 
+}
+
+#card1.flipped #firstcard,
+#card2.flipped #thirdcard {
+    transform: rotateY(-180deg);
+}
+
+#card1.flipped #secondcard,
+#card2.flipped #fourthcard {
+    transform: rotateY(0deg);
 } */
+
+
 
 #score1, #score2 {
     display: flex;
@@ -135,7 +158,10 @@ Position the front and back side
     height: 43px;
     text-align: center;
     display: inline-block;
-    
+}
+
+button {
+    cursor: pointer;
 }
 
 #pass1, #pass2 {
@@ -152,7 +178,7 @@ Position the front and back side
     display: inline-block;
 }
 
-#message {
+#message, #endscreen {
     /* position: absolute;
     top: 0;
     left: 0; */
@@ -162,22 +188,44 @@ Position the front and back side
     transition: all 1s ease;
     display: grid;
     place-content: center;
-    
+    transition: opacity 0.5s ease-in-out;
 }
 
-#overlaymsg {
+
+#overlaymsg, #newgamemsg {
     width: 528px;
     height: 190px ;
     background-color: #6C87B1;
     padding: 40px;
     border-radius: 20px;
-    
 }
 
-#overlaymsg p {
+#overlaymsg {
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+}
+
+#overlaymsg p, #endscreen p {
     font-family: 'Sniglet';
     color: white;
-    font-size: 20px ;
+    font-size: 30px ;
     text-align: center;
-    
+}
+
+#newgame {
+    font-family: 'Zain' ;
+    background-color: #9D7FE3;
+    color: white;
+    font-size: 20px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    /* width: 117px;
+    height: 43px; */
+    text-align: center;
+    display: inline-block;
+    display: block;
+    margin: 20px;
+    margin: auto;
 }
