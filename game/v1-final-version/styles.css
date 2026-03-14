@@ -44,7 +44,18 @@ h1 {
     border-style: none;
     font-size: 36px;
     border-radius: 10px;
-    cursor: pointer;
+    box-shadow: 5px 3px #693b8b ;
+}
+
+#start:hover{
+    background-color: #ab69dd;
+    font-family: "Zain";
+    color: white; 
+    padding: 15px;
+    border-style: none;
+    font-size: 36px;
+    border-radius: 10px;
+    box-shadow: 5px 3px #693b8b ;
 }
 
 #score {
@@ -67,7 +78,6 @@ main {
     position: relative;
 }
 
-
 section {
     display: flex;
     justify-content: center;
@@ -83,7 +93,6 @@ section {
 
 #playscreen {
     display: flex;
-    /* flex-direction: column; */
     background-color: #EFFAFF;
     gap: 140px;
 }
@@ -166,6 +175,20 @@ section {
     display: inline-block;
 }
 
+#flip1:hover, #flip2:hover {
+    font-family: 'Zain' ;
+    background-color: #b599f7;
+    color: white;
+    font-size: 24px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 135px;
+    height: 44px;
+    text-align: center;
+    display: inline-block;
+}
+
 button {
     cursor: pointer;
 }
@@ -184,10 +207,21 @@ button {
     display: inline-block;
 }
 
+#pass1:hover, #pass2:hover {
+    font-family: 'Zain' ;
+    background-color: #41deba;
+    color: white;
+    font-size: 24px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 135px;
+    height: 44px;
+    text-align: center;
+    display: inline-block;
+}
+
 #message, #endscreen {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -206,6 +240,63 @@ button {
     border-radius: 20px;
 }
 
+#overlay-content {
+    background-color: #BC9D57;
+    width: 607px;
+    height: 385px ;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#overlay-content h2 {
+    font-family: 'Gorditas';
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+#overlay-content ol li {
+    font-family: 'zain';
+    font-size: 25px;
+    color: white;
+    line-height: 1.5;
+}
+
+#close {
+    font-family: 'Zain' ;
+    background-color: #FFF7E5;
+    color: #A0542E;
+    box-shadow: 4px 3px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 107px;
+    height: 38px;
+    text-align: center;
+    display: inline-block;
+    display: block;       
+    margin: 30px auto 0;  /* top margin 20px, auto left/right centers it, 0 bottom */
+}
+
+#close:hover{
+    font-family: 'Zain' ;
+    background-color: #A0542E;
+    color: #FFF7E5;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 107px;
+    height: 38px;
+    text-align: center;
+    display: inline-block;
+    display: block;       
+    margin: 30px auto 0;  /* top margin 20px, auto left/right centers it, 0 bottom */
+}
+
+
 #overlaymsg {
     display: flex;
     justify-content: center;  
@@ -221,9 +312,10 @@ button {
 
 #newgame {
     font-family: 'Zain' ;
-    background-color: #9D7FE3;
-    color: white;
-    font-size: 20px;
+    background-color: #e8c1d7;
+    color: rgb(60, 7, 83);
+    font-weight: 550;
+    font-size: 18px;
     border-style: none;
     padding: 10px;
     border-radius: 8px;
@@ -234,4 +326,64 @@ button {
     display: block;
     margin: 20px;
     margin: auto;
+}
+
+#newgame:hover {
+    font-family: 'Zain' ;
+    background-color: rgb(113, 51, 139);
+    color: #ffffff;
+    font-weight: 550;
+    font-size: 18px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    display: block;
+    margin: 20px;
+    margin: auto;
+}
+
+#instruction {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;          
+    height: 50px;
+    font-family: "Gorditas";
+    color: #77391A;
+    background-color: #F5D611;
+    border-radius: 50%;   
+    border: none;
+    font-size: 2.3em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    z-index: 2000;          
+}
+
+#instruction:hover {
+    color: #77391A;
+    background-color: #ffe957;
+}
+
+#overlayback {
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: grid;
+    place-content: center;
+    visibility: hidden;      
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;          
+}
+
+#overlayback.showing {
+    visibility: visible;
+    opacity: 1;
 }

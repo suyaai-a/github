@@ -10,13 +10,10 @@
     const pass1 = document.querySelector('#pass1');
     const pass2 = document.querySelector('#pass2');
     const overlay = document.querySelector('#overlaymsg p')
-    const card1 = document.querySelector('#card1');
-    const card2 = document.querySelector('#card2');
     const p1score = document.querySelector('#p1score');
     const p2score = document.querySelector('#p2score');
     const actions1 = document.querySelector('#actions1');
     const actions2 = document.querySelector('#actions2');
-    const endscreen = document.querySelector('#endscreen');
     const newgame = document.querySelector('#newgame');
     const endscreenText = document.querySelector('#endscreen p');
     const overlaySection = document.querySelector('#message'); 
@@ -30,6 +27,9 @@
     const flipSound = new Audio('audio/flipcard.mp3');
     const meowsound = new Audio('audio/catmeow.mp3');
     const victory = new Audio('audio/victory.mp3');
+    const instructionBtn = document.querySelector('#instruction');
+    const closeBtn = document.querySelector('#close');
+    const overlayback = document.querySelector('#overlayback')
 
     const gameData = {
         deck: [
@@ -51,23 +51,28 @@
 
     };
 
+    instructionBtn.addEventListener('click', () => {
+        overlayback.classList.remove('hidden');
+        overlayback.classList.add('showing');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        overlayback.classList.remove('showing');
+        overlayback.classList.add('hidden');
+    });
+
     start.addEventListener('click', function() {
-
         flipSound.load();
-
         homepage.className = 'hidden';
         playscreen.className = 'showing';
         
         gameData.index = Math.round(Math.random());
 
         setUpTurn();
-
     });
 
     flip1.addEventListener('click', function(){
-
         if(gameData.index === 0){
-
             flipSound.currentTime = 0;
             flipSound.play();
 
@@ -76,13 +81,10 @@
             p1cards.forEach(card =>{
                 card.classList.add('flipped');
             });
-
         }
-
     });
 
     flip2.addEventListener('click', function(){
-
         if(gameData.index === 1){
 
             flipSound.currentTime = 0;
@@ -93,9 +95,7 @@
             p2cards.forEach(card =>{
                 card.classList.add('flipped');
             });
-
         }
-
     });
 
     pass1.addEventListener('click', function(){
@@ -128,11 +128,11 @@
 
         setTimeout(function(){
             document.querySelector('#message').classList = 'hidden';
-        },2500);
+        },2200);
 
     }
 
-    function showOverlay(msg, duration = 2500) {
+    function showOverlay(msg, duration = 2200) {
         overlayText.textContent = msg;
         overlaySection.classList.add('showing');
         overlaySection.classList.remove('hidden');

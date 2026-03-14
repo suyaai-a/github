@@ -47,11 +47,6 @@
                         <img src="images/browncat.png">
                     </div>
 
-                    <!-- <div id="card1">
-                        <img id="firstcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                        <img id="secondcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                    </div> -->
-
                     <div id="card1">
 
                         <div class="card">
@@ -81,20 +76,11 @@
                     
                 </div>
 
-                <!-- <div id="screenmsg">
-                    <p>Message goes here...</p>
-                </div> -->
-
                 <div id="player2">
                     <div id="score2">
                         <p>Player 2: <br><strong id="p2score">0</strong> points</p>
                         <img src="images/orangecat.png">
                     </div>
-
-                    <!-- <div id="card2">
-                        <img id= "thirdcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                        <img id="fourthcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                    </div> -->
 
                     <div id="card2">
 
@@ -125,13 +111,21 @@
                 </div>
             </section>
 
-            <!-- <section id="gamecontrol">
-                <div>
-                    <button></button>
-                </div>
-            </section> -->
         </main>
 
+        <button id='instruction'>?</button>
+        <div id="overlayback" class="hidden">
+            <div id="overlay-content">
+                <h2>How to Play?</h2>
+                <ol>
+                    <li>Randomly pick first player.</li>
+                    <li>Flip cards and add to score unless a “1” OR two "1" appears (snake eye and score zeros out).</li>
+                    <li>Player can pass turn or continue flipping.</li>
+                    <li>First to 29+ wins.</li>
+                </ol>
+                <button id='close'>Close</button>
+            </div>
+        </div>
 
         <section id="message" class="hidden">
             <div id="overlaymsg">
