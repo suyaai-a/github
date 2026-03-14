@@ -51,6 +51,7 @@
 
     };
 
+    // how to play and close button is showing when click and hidden when it's not
     instructionBtn.addEventListener('click', () => {
         overlayback.classList.remove('hidden');
         overlayback.classList.add('showing');
@@ -61,16 +62,19 @@
         overlayback.classList.add('hidden');
     });
 
+    // start page hides when click starts and playscreen appears
     start.addEventListener('click', function() {
         flipSound.load();
         homepage.className = 'hidden';
         playscreen.className = 'showing';
         
+        // random player select
         gameData.index = Math.round(Math.random());
 
         setUpTurn();
     });
 
+    // when player click flip the card is flip and shuffle card function starts
     flip1.addEventListener('click', function(){
         if(gameData.index === 0){
             flipSound.currentTime = 0;
@@ -98,6 +102,7 @@
         }
     });
 
+    // pass button that allow passing to the other player
     pass1.addEventListener('click', function(){
         if(gameData.index === 0){
             gameData.index = 1;
@@ -112,10 +117,13 @@
         }
     });
 
+    // player's turn
     function setUpTurn(){
 
+        // random player selectd
         overlay.innerHTML = `${gameData.players[gameData.index]}'s turn!`;
 
+        // action button hides depending on player's turn
         if(gameData.index === 0){
             actions1.classList = "showing";
             actions2.classList = "hidden";
@@ -124,6 +132,7 @@
             actions1.classList = "hidden";
         }
 
+        // message appears to let user know which player is going
         document.querySelector('#message').classList = 'showing';
 
         setTimeout(function(){
@@ -132,6 +141,7 @@
 
     }
 
+    // overlay message being shown or hidden 
     function showOverlay(msg, duration = 2200) {
         overlayText.textContent = msg;
         overlaySection.classList.add('showing');
@@ -145,10 +155,11 @@
 
 
     function shuffleCard(){
-
+        // cards are shuffled based on random numbers starting from the first array
         gameData.shuffle1 = Math.floor(Math.random()*6) + 1;
         gameData.shuffle2 = Math.floor(Math.random()*6) + 1;
 
+        // all four cards are being shuffled
         if(gameData.index === 0){
 
             firstcard.setAttribute("src", `images/${gameData.deck[gameData.shuffle1-1].img}`);
@@ -159,10 +170,10 @@
             thirdcard.setAttribute("src", `images/${gameData.deck[gameData.shuffle1-1].img}`);
             fourthcard.setAttribute("src", `images/${gameData.deck[gameData.shuffle2-1].img}`);
         }
-
+        // adding card numbers together
         gameData.sum = gameData.shuffle1 + gameData.shuffle2;
 
-        // if player flip a 2
+        // if player flip two ones
         if (gameData.sum === 2) {
             gameData.score[gameData.index] = 0;
             gameData.index = gameData.index === 0 ? 1 : 0;
@@ -190,6 +201,7 @@
     }
 
     function checkWinningCondition(){
+        // if the score is greater than or equal to the gameEnd score the game ends
 
         if(gameData.score[gameData.index] >= gameData.gameEnd){
 
@@ -204,6 +216,7 @@
             actions1.classList = "hidden";
             actions2.classList = "hidden";
 
+            // screen reloads to homescreen when click new game
             newgame.addEventListener('click', function(){
                 location.reload();
             });

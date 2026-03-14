@@ -243,9 +243,29 @@ button {
 #overlay-content {
     background-color: #BC9D57;
     width: 607px;
-    height: 385px ;
+    height: 380px ;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#source-content {
+    background-color: #4d607d;
+    width: 550px;
+    height: 300px ;
     padding: 20px;
     border-radius: 20px;
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.source-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   /* full screen height */
 }
 
 #overlay-content h2 {
@@ -255,11 +275,24 @@ button {
     text-align: center;
 }
 
-#overlay-content ol li {
+#overlay-content ol li, #source-content p {
+    font-family: 'zain';
+    font-size: 20px;
+    color: white;
+    line-height: 1.5;
+}
+
+#source-content p {
     font-family: 'zain';
     font-size: 25px;
     color: white;
-    line-height: 1.5;
+    line-height: 2.5;
+}
+
+#source-content a {
+    font-family: 'zain';
+    font-size: 25px;
+    color: rgb(216, 190, 248);
 }
 
 #close {
@@ -276,7 +309,8 @@ button {
     text-align: center;
     display: inline-block;
     display: block;       
-    margin: 30px auto 0;  /* top margin 20px, auto left/right centers it, 0 bottom */
+    margin: 25px auto 0;  /* top margin 20px, auto left/right centers it, 0 bottom */
+    margin-bottom: 30px;
 }
 
 #close:hover{
@@ -293,7 +327,8 @@ button {
     text-align: center;
     display: inline-block;
     display: block;       
-    margin: 30px auto 0;  /* top margin 20px, auto left/right centers it, 0 bottom */
+    margin: 25px auto 0;  /* top margin 20px, auto left/right centers it, 0 bottom */
+    margin-bottom: 30px;
 }
 
 
@@ -383,7 +418,18 @@ button {
     z-index: 1000;          
 }
 
+
 #overlayback.showing {
     visibility: visible;
     opacity: 1;
+}
+
+footer a {
+    font-family: 'sniglet';
+    font-size: 16px;
+    color: rgb(215, 255, 194) ;
+}
+
+footer {
+    text-align: center;
 }

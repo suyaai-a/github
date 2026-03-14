@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>V1 Game of CATS!</title>
+        <title>V2 Game of CATS!</title>
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
@@ -44,26 +44,26 @@
                 <div id="player1">
                     <div id="score1">
                         <p>Player 1: <br><strong id="p1score">0</strong> points</p>
-                        <img src="images/browncat.png">
+                        <img src="images/browncat.png" alt="brown cat" height="140" width="140">
                     </div>
 
                     <div id="card1">
 
                         <div class="card">
                             <div class="front">
-                                <img src="images/blankcard.png">
+                                <img src="images/blankcard.png" alt="blank card" height="220" width="220">
                             </div>
                             <div class="back">
-                                <img id="firstcard" src="images/card1.png">
+                                <img id="firstcard" src="images/card1.png" alt="front card" height="220" width="220">
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="front">
-                                <img src="images/blankcard.png">
+                                <img src="images/blankcard.png" alt="blank card" height="220" width="220">
                             </div>
                             <div class="back">
-                                <img id="secondcard" src="images/card2.png">
+                                <img id="secondcard" src="images/card2.png" alt="front card" height="220" width="220">
                             </div>
                         </div>
 
@@ -79,26 +79,26 @@
                 <div id="player2">
                     <div id="score2">
                         <p>Player 2: <br><strong id="p2score">0</strong> points</p>
-                        <img src="images/orangecat.png">
+                        <img src="images/orangecat.png" alt="orange cat" height="140" width="140">
                     </div>
 
                     <div id="card2">
 
                         <div class="card">
                             <div class="front">
-                                <img src="images/blankcard.png">
+                                <img src="images/blankcard.png" alt="blank card" height="220" width="220">
                             </div>
                             <div class="back">
-                                <img id="thirdcard" src="images/card1.png">
+                                <img id="thirdcard" src="images/card1.png" alt="front cat" height="220" width="220">
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="front">
-                                <img src="images/blankcard.png">
+                                <img src="images/blankcard.png" alt="blank card" height="220" width="220" >
                             </div>
                             <div class="back">
-                                <img id="fourthcard" src="images/card2.png">
+                                <img id="fourthcard" src="images/card2.png" alt="front card" height="220" width="220">
                             </div>
                         </div>
 
@@ -113,20 +113,6 @@
 
         </main>
 
-        <button id='instruction'>?</button>
-        <div id="overlayback" class="hidden">
-            <div id="overlay-content">
-                <h2>How to Play?</h2>
-                <ol>
-                    <li>Randomly pick first player.</li>
-                    <li>Flip cards and add to score unless a “1” OR two "1" appears (snake eye and score zeros out).</li>
-                    <li>Player can pass turn or continue flipping.</li>
-                    <li>First to 29+ wins.</li>
-                </ol>
-                <button id='close'>Close</button>
-            </div>
-        </div>
-
         <section id="message" class="hidden">
             <div id="overlaymsg">
                 <p>Overlay message goes here...</p>
@@ -139,5 +125,22 @@
                 <button id="newgame">Start a new game</button>
             </div>
         </section>
+
+        <button id='instruction'>?</button>
+        <div id="overlayback" class="hidden">
+            <div id="overlay-content">
+                <h2>How to Play?</h2>
+                <ol>
+                    <li>Randomly pick first player.</li>
+                    <li>Flip cards and add to score unless a “1” OR two "1" appears (snake eye and score zeros out).</li>
+                    <li>Player can pass turn or continue flipping.</li>
+                    <li>First to 29+ wins.</li>
+                </ol>
+                <button id='close'>Close</button>
+                <footer>
+                    <a href="sources.html">Sound Source</a>
+                </footer>
+            </div>
+        </div>
     </body>
 </html>
