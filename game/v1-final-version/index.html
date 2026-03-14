@@ -1,125 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V1 Game of CATS!</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>V1 Game of CATS!</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <h1>Game of CATS!</h1>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1>Game of CATS!</h1>
 
-    <main>
-        <section id="homepage" class="showing">
+        <main>
+            <section id="homepage" class="showing">
 
-            <div id="cats">
-                <img src="images/brownhome.png" alt="brown cat" height="220" width="220">
-                <img src="images/orangehome.png" alt="orange cat" height="220" width="220">
-            </div>
+                <div id="cats">
+                    <img src="images/brownhome.png" alt="brown cat" height="220" width="220">
+                    <img src="images/orangehome.png" alt="orange cat" height="220" width="220">
+                </div>
 
-            <div id="context">
-                <p>Game will randomly pick the first player</p>
-            </div>
+                <div id="context">
+                    <p>Game will randomly pick the first player</p>
+                </div>
 
-            <div id="startgame">
-                <button id="start">START</button>
+                <div id="startgame">
+                    <button id="start">START</button>
+                </div>
+            </section>
+
+            <section id="playscreen" class="hidden">
+
+                <div id="player1">
+                    <div id="score1">
+                        <p>Player 1: <br><strong id="p1score">0</strong> points</p>
+                        <img src="images/browncat.png">
+                    </div>
+
+                    <!-- <div id="card1">
+                        <img id="firstcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        <img id="secondcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
+                    </div> -->
+
+                    <div id="card1">
+
+                        <div class="card">
+                            <div class="front">
+                                <img src="images/blankcard.png">
+                            </div>
+                            <div class="back">
+                                <img id="firstcard" src="images/card1.png">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="front">
+                                <img src="images/blankcard.png">
+                            </div>
+                            <div class="back">
+                                <img id="secondcard" src="images/card2.png">
+                            </div>
+                        </div>
+
+                    </div>
+            
+                    <div id="actions1">
+                        <button id="flip1">Flip</button>
+                        <button id="pass1">Pass</button>
+                    </div>
+                    
+                </div>
+
+                <!-- <div id="screenmsg">
+                    <p>Message goes here...</p>
+                </div> -->
+
+                <div id="player2">
+                    <div id="score2">
+                        <p>Player 2: <br><strong id="p2score">0</strong> points</p>
+                        <img src="images/orangecat.png">
+                    </div>
+
+                    <!-- <div id="card2">
+                        <img id= "thirdcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
+                        <img id="fourthcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
+                    </div> -->
+
+                    <div id="card2">
+
+                        <div class="card">
+                            <div class="front">
+                                <img src="images/blankcard.png">
+                            </div>
+                            <div class="back">
+                                <img id="thirdcard" src="images/card1.png">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="front">
+                                <img src="images/blankcard.png">
+                            </div>
+                            <div class="back">
+                                <img id="fourthcard" src="images/card2.png">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="actions2">
+                        <button id="flip2">Flip</button>
+                        <button id="pass2">Pass</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section id="gamecontrol">
+                <div>
+                    <button></button>
+                </div>
+            </section> -->
+        </main>
+
+
+        <section id="message" class="hidden">
+            <div id="overlaymsg">
+                <p>Overlay message goes here...</p>
             </div>
         </section>
 
-        <section id="playscreen" class="hidden">
-            <div id="player1">
-                <div id="score1">
-                    <p>Player 1: <br><strong id="p1score">0</strong> points</p>
-                    <img src="images/browncat.png">
-                </div>
-
-                <div id="card1">
-                    <img id="firstcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                    <img id="secondcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                    <!-- <img id="secondcard" src="images/card1.png" alt="card1" height="326" width="210"> -->
-                </div>
-
-                <!-- <div id="card1">
-                    <div id="flip1">
-                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                        <img src="images/card1.png" alt="card1" height="326" width="210">
-                    </div>
-                        
-                    <div id="flip2">
-                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                        <img src="images/card1.png" alt="card1" height="326" width="210">
-                    </div>
-                </div> -->
-                
-                <div id="actions1">
-                    <button id="flip1">Flip</button>
-                    <button id="pass1">Pass</button>
-                </div>
-            </div>
-
-            <div id="player2">
-                <div id="score2">
-                    <p>Player 1: <br><strong id="p2score">0</strong> points</p>
-                    <img src="images/orangecat.png">
-                </div>
-
-                <div id="card2">
-                    <img id= "thirdcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                    <img id="fourthcard" src="images/blankcard.png" alt="card cover" height="326" width="210">
-                </div>
-
-                <!-- <div id="card2">
-                    
-                    <div id="flip1">
-                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                         <img src="images/card1.png" alt="card1" height="326" width="210">
-                    </div>
-                        
-                    <div id="flip2">
-                        <img src="images/blankcard.png" alt="card cover" height="326" width="210">
-                        <img src="images/card1.png" alt="card1" height="326" width="210">
-                    </div>
-                    
-                </div> -->
-
-                <div id="actions2">
-                    <button id="flip2">Flip</button>
-                    <button id="pass2">Pass</button>
-                </div>
+        <section id="endscreen" class="hidden">
+            <div id="newgamemsg">
+                <p>Player 1 ends with 36 points</p>
+                <button id="newgame">Start a new game</button>
             </div>
         </section>
-
-        <!-- <section id="gamecontrol">
-            <div>
-                <button></button>
-            </div>
-        </section> -->
-    </main>
-
-    <section id="message" class="hidden">
-        <div id="overlaymsg">
-            <p>Overlay message goes here...</p>
-        </div>
-    </section>
-
-    <section id="endscreen" class="hidden">
-        <div id="newgamemsg">
-            <p>Player 1 ends with 36 points</p>
-            <button id="newgame">Start a new game</button>
-        </div>
-    </section>
-</body>
+    </body>
 </html>

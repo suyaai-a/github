@@ -21,6 +21,15 @@
     const endscreenText = document.querySelector('#endscreen p');
     const overlaySection = document.querySelector('#message'); 
     const overlayText = document.querySelector('#overlaymsg p'); 
+    const firstcard = document.querySelector('#firstcard');
+    const secondcard = document.querySelector('#secondcard');
+    const thirdcard = document.querySelector('#thirdcard');
+    const fourthcard = document.querySelector('#fourthcard');
+    const p1cards = document.querySelectorAll('#card1 .card');
+    const p2cards = document.querySelectorAll('#card2 .card');
+    const flipSound = new Audio('audio/flipcard.mp3');
+    const meowsound = new Audio('audio/catmeow.mp3');
+    const victory = new Audio('audio/victory.mp3');
 
     const gameData = {
         deck: [
@@ -43,26 +52,50 @@
     };
 
     start.addEventListener('click', function() {
+
+        flipSound.load();
+
         homepage.className = 'hidden';
         playscreen.className = 'showing';
         
         gameData.index = Math.round(Math.random());
+
         setUpTurn();
 
     });
 
     flip1.addEventListener('click', function(){
+
         if(gameData.index === 0){
-            card1.classList.add('flipped'); 
-            shuffleCard(); 
+
+            flipSound.currentTime = 0;
+            flipSound.play();
+
+            shuffleCard();
+
+            p1cards.forEach(card =>{
+                card.classList.add('flipped');
+            });
+
         }
+
     });
 
     flip2.addEventListener('click', function(){
+
         if(gameData.index === 1){
-            card2.classList.add('flipped'); 
-            shuffleCard(); 
+
+            flipSound.currentTime = 0;
+            flipSound.play();
+
+            shuffleCard();
+
+            p2cards.forEach(card =>{
+                card.classList.add('flipped');
+            });
+
         }
+
     });
 
     pass1.addEventListener('click', function(){
@@ -117,27 +150,41 @@
         gameData.shuffle2 = Math.floor(Math.random()*6) + 1;
 
         if(gameData.index === 0){
-            card1.innerHTML = `<img src="images/${gameData.deck[gameData.shuffle1-1].img}">
-                            <img src="images/${gameData.deck[gameData.shuffle2-1].img}">`;
+
+            firstcard.setAttribute("src", `images/${gameData.deck[gameData.shuffle1-1].img}`);
+            secondcard.setAttribute("src", `images/${gameData.deck[gameData.shuffle2-1].img}`);
+
         } else {
-            card2.innerHTML = `<img src="images/${gameData.deck[gameData.shuffle1-1].img}">
-                            <img src="images/${gameData.deck[gameData.shuffle2-1].img}">`;
+
+            thirdcard.setAttribute("src", `images/${gameData.deck[gameData.shuffle1-1].img}`);
+            fourthcard.setAttribute("src", `images/${gameData.deck[gameData.shuffle2-1].img}`);
         }
 
         gameData.sum = gameData.shuffle1 + gameData.shuffle2;
 
+        // if player flip a 2
         if (gameData.sum === 2) {
             gameData.score[gameData.index] = 0;
             gameData.index = gameData.index === 0 ? 1 : 0;
             showCurrentScore();
             showOverlay('Oh snap! Snake eyes!', 2500);
+            meowsound.currentTime = 0;
+            meowsound.play();
             setTimeout(setUpTurn, 2500);
+
+        // if player flip a 1
         } else if (gameData.shuffle1 === 1 || gameData.shuffle2 === 1) {
             gameData.index = gameData.index === 0 ? 1 : 0;
-            showOverlay(`Sorry, one of your rolls was one, switching to ${gameData.players[gameData.index]}`, 2500);
+            showOverlay(`Sorry, one of your cards was one, switching to ${gameData.players[gameData.index]}`, 2500);
+            meowsound.currentTime = 0;
+            meowsound.play();
             setTimeout(setUpTurn, 2500);
+
+        // if neither card is a 1
         } else {
             gameData.score[gameData.index] += gameData.sum;
+            flip1.innerHTML= 'Flip again'
+            flip2.innerHTML= 'Flip again'
             checkWinningCondition();
         }
     }
@@ -150,6 +197,7 @@
 
             endscreen.classList = "showing";
 
+            victory.play();
             endscreenText.textContent =
             `${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!`;
 
@@ -160,18 +208,8 @@
                 location.reload();
             });
 
-            // document.querySelector('#newgame').addEventListener('click', function(){
-            //     location.reload();
-            // });
-
-            // document.querySelector('#quitgame').addEventListener('click', function(){
-            //     window.close();
-            // });
-
         } else {
-
             showCurrentScore();
-
         }
     }
 
@@ -180,5 +218,4 @@
         p2score.textContent = gameData.score[1];
     }
 
-    
 })();
